@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		/*
+		* Exercise Two
+		* Why does the following output true?
+		*/
+		//because "false" is not an empty string, which evaluates to true
+		//there are 6 falsey values in JS, and any other value is true.
+		//false, 0, "", undefined, NaN, null are the 6 falsey values. everything else is true/truthy.
+
+		var a = "false";
+		console.log(a);
+		var b = true;
+		console.log(b);
+
+		// "&&" is "and"
+		console.log (a && b);
+
+		/*
+		* Bonus Question: Why does (b && a) log "false"?
+		*/
+
+		//short circuiting:
+		//AND
+		//return the first falsey value, or if there is no falsey value, return the last truthey one.
+
+		console.log(b && a);
+
+		//in this case, a is truthey with its string of "false"
+		//OR
+		//return the first truthy value, or if there is no truthy value, return the last falsey value
+
+		undefined && null === undefined
+		null && undefined === null
+
+		3 && 0 === 0
+
+		5 && 3 && 0 === 0
+
+		3 && undefined && 12 && a === undefined
+
+		3 && 5 && 7 === 7
+
+		0 || 3 === 3
+
+		null || undefined === undefined
+
+		7 || 3 || null || 0 === 7 //first truthy value
+
+		var whatever = prompt("Hey");
+
+		input = whatever || "no input"; 
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>
